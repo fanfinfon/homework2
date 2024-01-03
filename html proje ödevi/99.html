@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuala Lumpur Travel Guide</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #titleContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #pageTitle {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #klInfo {
+            text-align: center;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        #clockAndWeatherContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        #klClockContainer,
+        #weatherContainer {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        #klClock {
+            font-size: 36px;
+        }
+
+        #weatherButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #klImages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .imageContainer {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .imageContainer img {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="titleContainer">
+        <div id="pageTitle">Kuala Lumpur Travel Guide</div>
+        <div id="klInfo">
+            <p>Welcome to Kuala Lumpur! Explore the dynamic city with a mix of modernity and rich cultural heritage.</p>
+        </div>
+    </div>
+
+    <div id="clockAndWeatherContainer">
+        <div id="klClockContainer">
+            <h2>Kuala Lumpur Digital Clock</h2>
+            <div id="klClock">00:00</div>
+        </div>
+
+        <div id="weatherContainer">
+            <h2>Weather in Kuala Lumpur</h2>
+            <button id="weatherButton" onclick="redirectToWeather()">Check Weather</button>
+        </div>
+    </div>
+
+    <div id="klImages">
+        <div class="imageContainer">
+            <img src="resimler/foto4.jpg" alt="Petronas Towers" width="200" height="200">
+            <p>The Petronas Towers are iconic twin skyscrapers in Kuala Lumpur, known for their impressive architecture and city views. Standing at a height of 451.9 meters, they were once the tallest twin towers in the world.
+
+</p>
+        </div>
+        <div class="imageContainer">
+            <img src="resimler/foto5.jpg" width="200" height="200">
+            <p>Batu Caves is a limestone hill with a series of caves and cave temples. The site is dedicated to Lord Murugan and is a popular pilgrimage site for Hindus. The giant golden statue of Lord Murugan and the colorful steps leading to the caves are highlights of the visit.</p>
+        </div>
+        <div class="imageContainer">
+            <img src="resimler/foto6.jpg" alt="Merdeka Square" width="200" height="200">
+            <p>Merdeka Square, also known as Dataran Merdeka, is a historical landmark in Kuala Lumpur. It was here that the Malaysian flag was hoisted for the first time in 1957, marking the country's independence. Surrounded by colonial-era buildings, the square is a symbol of Malaysia's history.</p>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('klClock').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+
+        function redirectToWeather() {
+            window.location.href = "https://www.google.com/search?q=kuala+lumpur+weather";
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

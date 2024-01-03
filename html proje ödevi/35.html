@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berlin Travel Guide</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #titleContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #pageTitle {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #berlinInfo {
+            text-align: center;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        #clockAndWeatherContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        #berlinClockContainer,
+        #weatherContainer {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 10px;
+        }
+
+        #berlinClock {
+            font-size: 36px;
+        }
+
+        #weatherButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #berlinImages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .imageContainer {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .imageContainer img {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="titleContainer">
+        <div id="pageTitle">Berlin Travel Guide</div>
+        <div id="berlinInfo">
+            <p>Welcome to Berlin! Explore the vibrant city with rich history and culture.</p>
+        </div>
+    </div>
+
+    <div id="clockAndWeatherContainer">
+        <div id="berlinClockContainer">
+            <h2>Berlin Digital Clock</h2>
+            <div id="berlinClock">00:00</div>
+        </div>
+
+        <div id="weatherContainer">
+            <h2>Weather in Berlin</h2>
+            <button id="weatherButton" onclick="redirectToWeather()">Check Weather</button>
+        </div>
+    </div>
+
+    <div id="berlinImages">
+        <div class="imageContainer">
+            <img src="resimler/foto1.jpg" alt="Reichstag Building" width="200" height="200">
+            <p>The Reichstag Building is the seat of the German Bundestag, located in Berlin. It is an iconic symbol of German democracy.</p>
+        </div>
+        <div class="imageContainer">
+            <img src="resimler/foto2.jpg" alt="Mount Mitte" width="200" height="200">
+            <p>Mount Mitte is a popular recreational area in Berlin, offering stunning views of the city. It's a great place for outdoor activities and relaxation.</p>
+        </div>
+        <div class="imageContainer">
+            <img src="resimler/foto3.jpg" alt="Berlin Wall" width="200" height="200">
+            <p>The Berlin Wall was a barrier that divided Berlin from 1961 to 1989. Today, remnants of the wall serve as a historical reminder of the city's past.</p>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('berlinClock').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+
+        function redirectToWeather() {
+            window.location.href = "https://www.google.com/search?q=berlin+weather";
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

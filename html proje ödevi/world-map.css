@@ -1,0 +1,97 @@
+
+svg{
+    height:560px ;
+    width: 80%;
+    border: 1px black solid;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    background-color :#c4f0fb;
+    fill: #22405a68;
+    stroke: #fff;
+    stroke-width: 1px;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.79);
+}
+
+
+svg path{
+    cursor: pointer;
+}
+
+svg path:hover{
+    fill: #2a3951;
+}
+
+
+
+.pin{
+    background: hsla(0, 48%, 35%, 0.708);
+    position: absolute;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+}
+
+.pin span{
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 0.5em;
+    top: 50%;
+    transform: translateY();
+    border-radius: 3em;
+    padding: 0.3em 0.6em;
+    font-size: 0.7em;
+    color: #2a3951c9;
+    font-family: sans-serif;
+}
+
+
+
+
+.nyc{
+    top: 39%;
+    left: 33%;
+}
+
+.berlin{
+    width: 0.5em;
+    height: 0.5em;
+    top:33%;
+    left:51.5%;
+}
+
+.berlin span{
+    left: 0em;
+}
+
+.kualalumpur{
+    width: 0.3em;
+    height: 0.3em;
+    top: 54.9%;
+    left: 72.4%;
+}
+
+.kualalumpur span{
+    left: 0em;
+}
+
+.athens{
+    width: 0.3em;
+    height: 0.3em;
+    top:39.5%;
+    left:54.2%;
+}
+
+.athens span{
+    left: 0em;
+}
+
+.france{
+    width: 0.3em;
+    height: 0.3em;
+    top:36%;
+    left:50%;
+}
+
+
